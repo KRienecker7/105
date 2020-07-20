@@ -17,17 +17,18 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="register.html">Register</a>
             </li>
+
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <div class="form-inline my-2 my-lg-0">
+            <input id="searchPet" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="search();">Search</button>
+          
         </div>
       </nav>
 
@@ -35,13 +36,69 @@
 
       <h1 class="text-center">Register a Pet:</h1>
 
+      <p>
+        <label for="name">Name:</label>
+        <input class="register-input" type="text" name="petName" id="petName">
+      </p>
+      <p>
+        <label for="age">Age:</label>
+        <input class="register-input" type="number" name="age" id="petAge">
+      </p>
+      <p>
+        <label for ="breed">Breed</label>
+        <input class="register-input" type for="text" name="breed" id="petBreed">
+      </p>
+      <p>
+        <label for="gender">Gender:</label>
+        <input class="register-input" type="text" name="gender" id="petGender">
+      </p>
+      <p>
+        <label for="service">Service</label>
+        <select name="service" id="petService">
+          <option value="haircut">Hair Cut</option>
+          <option value="nails cut">Nails Cut</option>
+          <option value="full serivce">Full Service</option>
+        </select>
+      </p>
 
-      <footer id="footer-info">
-       
+      <p>
+        <label for="ownerName">Owner Name:</label>
+        <input class="register-input" type="text" name="ownerName" id="ownerName">
+      </p>
+      <p>
+        <label for="phone">Phone:</label>
+        <input class="register-input" type="text" name="phone" id="contactPhone">
+      </p>
+
+      <input type="button" value="Register" onclick="register();">
+
+      <H2>Registered Pets</H2>
+
+      <ul id="petList">
+        <!-- diplsay the list items-->
         
-      </footer>
+      </ul>
+
+      <table id="petTable">
+        <tr>
+          <td>Name</td>
+          <td>Age</td>
+          <td>Breed</td>
+          <td>Gender</td>
+          <td>Service</td>
+          <td>OwnerName</td>
+          <td>Phone</td>
+          <td></td>
+        </tr>
+        
+      </table>
+
     </div>
 
+    <footer id="footer-info">
+       
+        
+  </footer>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

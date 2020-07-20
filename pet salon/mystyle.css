@@ -6,3 +6,8 @@ img{
     width: 100%;
     border: black solid 2px;
 }
+
+#petTable{
+    border: solid black 4px;
+}
+
